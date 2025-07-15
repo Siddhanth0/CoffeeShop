@@ -8,21 +8,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.coffeeshop.Domain.ItemModel
-import com.example.coffeeshop.Helper.ManagmentCart
+import com.example.coffeeshop.Helper.ManagementCart
 import com.example.coffeeshop.R
 import com.example.coffeeshop.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityDetailBinding
     private lateinit var item: ItemModel
-    private lateinit var managementCart: ManagmentCart
+    private lateinit var managementCart: ManagementCart
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        managementCart = ManagmentCart(this)
+        managementCart = ManagementCart(this)
         bundle()
         initSizeList()
     }
